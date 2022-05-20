@@ -5,15 +5,12 @@
   --accent-color: #2196f3;
   --secondary-bg-color: #f5f4fa;
   --main-bg-color: #e5e5e5;
-  --card-bg-color: #ffffff;
+  --item-bg-color: #ffffff;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
 
@@ -42,21 +39,11 @@ a.current {
   color: var(--accent-color);
 }
 
-.contacts {
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  color: inherit;
-}
-.contacts:hover,
-.contacts:focus {
-  color: var(--accent-color);
-}
-
 .section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-color);
 }
@@ -67,7 +54,8 @@ a.current {
 /* ------------------------------------HEADER------------------------------------ */
 .header {
   font-weight: 500;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   background-color: #ffffff;
 }
@@ -88,7 +76,19 @@ a.current {
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
   color: var(--title-color);
+}
+.header-contacts {
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.header-contacts:hover,
+.header-contacts:focus {
+  color: var(--accent-color);
 }
 
 /* --------------------------------------HERO------------------------------- */
@@ -120,7 +120,7 @@ a.current {
 .hero-btn:hover,
 .hero-btn:focus {
   color: var(--accent-color);
-  background-color: var(--card-bg-color);
+  background-color: var(--item-bg-color);
 }
 
 /* --------------------------------------Features------------------------------- */
@@ -130,9 +130,16 @@ a.current {
 
 .features-title {
   font-weight: 700;
+  font-size: 14px;
   line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+}
+.features-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 /* --------------------------------------ABOUT------------------------------- */
 
@@ -146,19 +153,21 @@ a.current {
 }
 
 .team-list-item {
-  background-color: var(--card-bg-color);
+  background-color: var(--item-bg-color);
 }
 
 .team-member {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
+  letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
 .team-member-desc {
   font-size: 16px;
   line-height: calc(19 / 16);
+  letter-spacing: 0.03em;
 }
 
 /* --------------------------------------FOOTER------------------------------- */
@@ -171,11 +180,27 @@ a.current {
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.footer-contacts {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts:hover,
+.footer-contacts:focus {
+  color: var(--accent-color);
 }
 
 .address {
   font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   color: #ffffff;
 }
 
@@ -185,9 +210,11 @@ a.current {
 }
 
 .portfolio-btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--secondary-text-color);
   background-color: var(--secondary-bg-color);
@@ -200,7 +227,7 @@ a.current {
   background-color: var(--accent-color);
 }
 .portfolio-item {
-  background-color: var(--card-bg-color);
+  background-color: var(--item-bg-color);
 }
 
 .portfolio-item-title {
@@ -214,4 +241,5 @@ a.current {
 .portfolio-item-text {
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.03em;
 }
