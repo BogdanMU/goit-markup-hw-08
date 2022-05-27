@@ -203,8 +203,6 @@ a.current {
 
 .features .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .features-list-item {
