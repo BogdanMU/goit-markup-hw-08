@@ -39,8 +39,8 @@
             </li>
           </ul>
         </nav>
-        <ul class="header-list list">
-          <li class="header-list-item">
+        <ul class="header-contact-list list">
+          <li class="header-list-contact">
             <a href="mailto:info@devstudio.com" class="header-contacts link">
               <svg class="header-list-icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
@@ -48,7 +48,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="header-list-item">
+          <li class="header-list-contact">
             <a href="tel:+380961111111" class="header-contacts link"
               ><svg class="header-list-icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-mail"></use>
@@ -65,7 +65,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-btn">Заказать услугу</button>
+          <button type="button" class="hero-btn" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!-- FEATURES -->
@@ -130,28 +132,40 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="about-list list">
             <li class="about-list-item">
-              <img
-                src="./images/img1.jpg"
-                alt="Разработчик печатает на клавиатуре"
-                width="370"
-                height="294"
-              />
+              <div class="about-box">
+                <img
+                  class="about-img"
+                  src="./images/img1.jpg"
+                  alt="Разработчик печатает на клавиатуре"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="about-box-text">Десктопные приложения</h3>
+              </div>
             </li>
             <li class="about-list-item">
-              <img
-                src="./images/img2.jpg"
-                alt="Разработчик работает с телефоном"
-                width="370"
-                height="294"
-              />
+              <div class="about-box">
+                <img
+                  class="about-img"
+                  src="./images/img2.jpg"
+                  alt="Разработчик работает с телефоном"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="about-box-text">Мобильные приложения</h3>
+              </div>
             </li>
             <li class="about-list-item">
-              <img
-                src="./images/img3.jpg"
-                alt="Разработчик работает с планшетом"
-                width="370"
-                height="294"
-              />
+              <div class="about-box">
+                <img
+                  class="about-img"
+                  src="./images/img3.jpg"
+                  alt="Разработчик работает с планшетом"
+                  width="370"
+                  height="294"
+                />
+                <h3 class="about-box-text">Дизайнерские решения</h3>
+              </div>
             </li>
           </ul>
         </div>
@@ -395,7 +409,7 @@
           >
           <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
 
-          <ul class="footer-contacts list">
+          <ul class="footer-contacts-list list">
             <li class="footer-contact-item">
               <a href="mailto:info@devstudio.com" class="footer-contacts link">
                 info@devstudio.com
@@ -443,5 +457,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>
+          <svg class="modal-icon" >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
