@@ -1,0 +1,14 @@
+.about__list {
+    display: flex;
+    margin-top: 50px;
+}
+
+.about__item {
+    display: block;
+    margin-right: 30px;
+    
+    &:last-child {
+    margin-right: 0;
+    }
+}
+

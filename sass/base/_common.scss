@@ -1,11 +1,22 @@
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--main-text-color);
 }
 
 .list {
     list-style: none;
 }
 
+
+
 .link {
     text-decoration: none;
+}
+
+
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
