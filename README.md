@@ -1,5 +1,5 @@
 # goit-markup-hw-07
 
 
-goit-markup-hw-06
-Homework module6
+goit-markup-hw-07
+Homework module7
