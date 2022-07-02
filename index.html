@@ -63,6 +63,11 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_mob"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- MAIN  -->
@@ -183,12 +188,30 @@
           <h2 class="title">Наша команда</h2>
           <ul class="person-list list">
             <li class="person-list__item">
-              <img
-                src="./images/team1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team1.jpg 1x, ./images/team1-2x-min.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team1-tab-min.jpg    1x,
+                    ./images/team1-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team1-mob-min.jpg    1x,
+                    ./images/team1-mob-2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team1.jpg" alt="Игорь Демьяненко" />
+              </picture>
+
               <div class="person-list__text">
                 <h3 class="person-list__title">Игорь Демьяненко</h3>
                 <p class="person-list__description">Product Designer</p>
@@ -225,12 +248,30 @@
               </ul>
             </li>
             <li class="person-list__item">
-              <img
-                src="./images/team2.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team2.jpg 1x, ./images/team2-2x-min.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team2-tab-min.jpg    1x,
+                    ./images/team2-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team2-mob-min.jpg    1x,
+                    ./images/team2-mob-2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team2.jpg" alt="Ольга Репина" />
+              </picture>
               <div class="person-list__text">
                 <h3 class="person-list__title">Ольга Репина</h3>
                 <p class="person-list__description">Frontend Developer</p>
@@ -267,12 +308,30 @@
               </ul>
             </li>
             <li class="person-list__item">
-              <img
-                src="./images/team3.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team3.jpg 1x, ./images/team3-2x-min.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team3-tab-min.jpg    1x,
+                    ./images/team3-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team3-mob-min.jpg    1x,
+                    ./images/team3-mob-2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team3.jpg" alt="Николай Тарасов" />
+              </picture>
               <div class="person-list__text">
                 <h3 class="person-list__title">Николай Тарасов</h3>
                 <p class="person-list__description">Marketing</p>
@@ -309,12 +368,30 @@
               </ul>
             </li>
             <li class="person-list__item">
-              <img
-                src="./images/team4.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/team4.jpg 1x, ./images/team4-2x-min.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team4-tab-min.jpg    1x,
+                    ./images/team4-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team4-mob-min.jpg    1x,
+                    ./images/team4-mob-2x-min.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team4.jpg" alt="Михаил Ермаков" />
+              </picture>
               <div class="person-list__text">
                 <h3 class="person-list__title">Михаил Ермаков</h3>
                 <p class="person-list__description">UI Designer</p>
@@ -353,6 +430,7 @@
           </ul>
         </div>
       </section>
+      <!-- CLIENTS -->
       <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
@@ -476,7 +554,7 @@
         </div>
       </div>
     </footer>
-
+    <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-button" data-modal-close>
@@ -562,6 +640,59 @@
       </div>
     </div>
 
+    <div class="mob-menu is-hidden">
+      <button class="menu-close-btn">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-close_mob"></use>
+        </svg>
+      </button>
+      <div class="mob-menu-conatiner">
+        <ul class="mob-menu__link-list list">
+          <li class="mob-menu__item">
+            <a
+              href="./index.html"
+              class="mob-menu__link link page-header__link--accent"
+              >Студия</a
+            >
+          </li>
+          <li class="mob-menu__item">
+            <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+          </li>
+          <li class="mob-menu__item">
+            <a href="" class="mob-menu__link link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mob-menu__contacts-list list">
+          <li class="mob-menu__contacts-item">
+            <a href="tel:+380961111111" class="mob-menu__contact-link link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mob-menu__contacts-item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="mob-menu__contact-link link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mob-menu__socials-list list">
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">Instagram</a>
+          </li>
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">Twitter</a>
+          </li>
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">Facebook</a>
+          </li>
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

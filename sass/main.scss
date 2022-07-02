@@ -1,7 +1,9 @@
 @import "./utils/vars";
 @import "./base/reset";
+@import "./utils/mixins";
 @import "./base/common";
 @import "./utils/hidden";
+
 
 @import "./components/container";
 @import "./components/title";
@@ -13,6 +15,7 @@
 @import './components/card-set';
 @import './components/modal';
 @import './components/contacts';
+@import './components/mob-menu';
 
 @import'./layouts/header';
 @import'./layouts/about';

@@ -4,6 +4,13 @@ body {
     color: var(--main-text-color);
 }
 
+.prevent-scroll{
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+}
 .list {
     list-style: none;
 }
@@ -17,6 +24,11 @@ body {
 
 
 .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop{
     padding-top: 94px;
     padding-bottom: 94px;
+}
 }

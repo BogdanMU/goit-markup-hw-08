@@ -1,14 +1,30 @@
 .contacts {
-    margin-left: auto;
-    display: flex;
+    display: none;
+    @include tablet{
+        margin-left: auto;
+        display: block;
+    }
+    @include desktop{
+        display: flex;
+    }
 }
 
 .contacts__item {
     display: block;
+    
+    @media screen and (max-width:1199px) {
+        margin-bottom: 10px;
+        &:last-child {
+                margin-bottom: 0;
+            }
+    }
+   
+    @include desktop{
     margin-right: 50px;
 
     &:last-child {
         margin-right: 0;
+    }
     }
 }
 

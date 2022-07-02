@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
     />
-     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- HEADER  -->
@@ -28,12 +28,14 @@
         <nav class="page-header__navigation">
           <ul class="page-header__list list">
             <li class="page-header__item">
-              <a href="./index.html" class="page-header__link link">Студия</a>
+              <a
+                href="./index.html"
+                class="page-header__link link page-header__link--current"
+                >Студия</a
+              >
             </li>
             <li class="page-header__item">
-              <a
-                href="./portfolio.html"
-                class="page-header__link link page-header__link--current"
+              <a href="./portfolio.html" class="page-header__link link"
                 >Портфолио</a
               >
             </li>
@@ -51,7 +53,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="contacts__item">
+          <li class="page-header__contacts__item">
             <a href="tel:+380961111111" class="contacts__link link"
               ><svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-mail"></use>
@@ -60,6 +62,11 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_mob"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -88,13 +95,29 @@
           <ul class="card-set list">
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/technocrack.jpg"
-                  alt="Фото ноутбука"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio1.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio1-tab-min.jpg    1x,
+                      ./images/portfolio1-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio1-mob-min.jpg    1x,
+                      ./images/portfolio1-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio1.jpg" alt="Технокряк" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -109,13 +132,32 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/basketball.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio2.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio2-tab-min.jpg    1x,
+                      ./images/portfolio2-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio2-mob-min.jpg    1x,
+                      ./images/portfolio2-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/portfolio2.jpg"
+                    alt="Постер с баскетболлистами"
+                  />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -133,13 +175,29 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/seafood.jpg"
-                  alt="Логотип Ресторана Seafood"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio3.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio3-tab-min.jpg    1x,
+                      ./images/portfolio3-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio3-mob-min.jpg    1x,
+                      ./images/portfolio3-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio3.jpg" alt="Логотип ресторана" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -157,13 +215,29 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/headphones.jpg"
-                  alt="Наушники"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio4.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio4-tab-min.jpg    1x,
+                      ./images/portfolio4-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio4-mob-min.jpg    1x,
+                      ./images/portfolio4-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio4.jpg" alt="Наушники" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -180,13 +254,29 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/boxes.jpg"
-                  alt="Две коробки"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio5.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio5-tab-min.jpg    1x,
+                      ./images/portfolio5-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio5-mob-min.jpg    1x,
+                      ./images/portfolio5-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio5.jpg" alt="Две коробки" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -203,13 +293,29 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/mac.jpg"
-                  alt="Макбук"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio6.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio6-tab-min.jpg    1x,
+                      ./images/portfolio6-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio6-mob-min.jpg    1x,
+                      ./images/portfolio6-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio6.jpg" alt="Макбук" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -226,13 +332,29 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/book.jpg"
-                  alt="Открытая книга"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio7.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio7-tab-min.jpg    1x,
+                      ./images/portfolio7-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio7-mob-min.jpg    1x,
+                      ./images/portfolio7-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio7.jpg" alt="Открытая книга" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -241,8 +363,9 @@
               </div>
 
               <div class="card-set__text-box">
-                <h2 class="card-set__title>
+                <h2 class="card-set__title">
                   Издание
+
                   <span lang="en">Limited Edition</span>
                 </h2>
                 <p class="card-set__text">Дизайн</p>
@@ -250,13 +373,29 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/tag.jpg"
-                  alt="Бирка Проект LAB"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio8.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio8-tab-min.jpg    1x,
+                      ./images/portfolio8-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio8-mob-min.jpg    1x,
+                      ./images/portfolio8-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/portfolio8.jpg" alt="фото бирки" />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -273,13 +412,32 @@
             </li>
             <li class="card-set__item">
               <div class="card-set__img-box">
-                <img
-                  class="card-set__img"
-                  src="./images/laptop.jpg"
-                  alt="Человек пользуется ноутбуком"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/portfolio9.jpg 1x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio9-tab-min.jpg    1x,
+                      ./images/portfolio9-tab-2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio9-mob-min.jpg    1x,
+                      ./images/portfolio9-mob-2x-min.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/portfolio9.jpg"
+                    alt="Человек печатает на ноутбуке"
+                  />
+                </picture>
                 <p class="card-set__description">
                   Ресурс предлагает комплексные предложения с разным уровнем
                   функционала и сервисов. Все это позволит посетителю получить
@@ -369,5 +527,59 @@
         </div>
       </div>
     </footer>
+
+    <div class="mob-menu is-hidden">
+      <button class="menu-close-btn">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-close_mob"></use>
+        </svg>
+      </button>
+      <div class="mob-menu-conatiner">
+        <ul class="mob-menu__link-list list">
+          <li class="mob-menu__item">
+            <a href="./index.html" class="mob-menu__link link">Студия</a>
+          </li>
+          <li class="mob-menu__item">
+            <a
+              href="./portfolio.html"
+              class="mob-menu__link link page-header__link--accent"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mob-menu__item">
+            <a href="" class="mob-menu__link link">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mob-menu__contacts-list list">
+          <li class="mob-menu__contacts-item">
+            <a href="tel:+380961111111" class="mob-menu__contact-link link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mob-menu__contacts-item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="mob-menu__contact-link link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mob-menu__socials-list list">
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">Instagram</a>
+          </li>
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">Twitter</a>
+          </li>
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">Facebook</a>
+          </li>
+          <li class="mob-menu__socials-item">
+            <a href="" class="mob-menu__socials-link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -14,8 +14,11 @@
 }
 
 .page-header__list {
-    display: flex;
-    margin-top: 32px;
+    display: none;
+    @include tablet{
+        display: flex;
+        margin-top: 32px;
+    }
 }
 
 .page-header__link {
@@ -37,17 +40,26 @@
 
 .page-header__home-link {
     display: block;
-    margin-top: 24px;
-    margin-bottom: 25px;
-    margin-right: 93px;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    margin-top: 16px;
+    margin-bottom: 16px;
 
     font-family: "Raleway", sans-serif;
     font-style: inherit;
     font-weight: 700;
-    font-size: 26px;
-    line-height: calc(31 / 26);
     letter-spacing: 0.03em;
     color: var(--title-color);
+    @include tablet{
+        margin-right: 88px;
+        
+    }
+    @include desktop{
+   
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    }
 }
 
 .page-header__item {
@@ -78,4 +90,30 @@
     }
 }
 
+.menu-open-btn{
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: auto;
+    border: none;
+    
+    svg{
+        fill: currentColor;
+    }
+
+    &:hover,&:focus{
+        color: var(--accent-color);
+    }
+    
+
+    @include tablet{
+        display: none;
+    }
+
+
+}
 

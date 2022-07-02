@@ -1,7 +1,35 @@
 .hero {
-    max-width: 1600px;
-    margin: 0 auto;
+    padding: 118px 0;
     background-color: #2f303a;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/Hero-img-mob-min.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include retina {
+                background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+                        rgba(25, 28, 38, 0.2)),
+                    url(../images/Hero-img-mob-2x-min.jpg);
+            }
+
+      @include tablet{
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/Hero-img-tab-min.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+            @include retina {
+                background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+                        rgba(25, 28, 38, 0.2)),
+                    url(../images/Hero-img-tab-2x-min.jpg);
+            }
+      }      
+   @include desktop{ max-width: 1600px;
+    margin: 0 auto;
+   
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
@@ -10,21 +38,31 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include retina {
+            background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+                    rgba(25, 28, 38, 0.2)),
+                url(../images/hero-bg-2x.jpg);}
+}
 }
 
 .hero__title {
-    max-width: 696px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
+    @include desktop{
+        max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+    }
 }
 
 .hero__btn {
