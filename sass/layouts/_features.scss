@@ -22,12 +22,17 @@
 
 .features__item {
     width: 100%;
+    margin-bottom: 30px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
 
     
     @include tablet {
             
             width: calc((100% - 30px) / 2); 
-           
+            margin-bottom: 0;
         }
 
     @include desktop {

@@ -158,6 +158,9 @@ img {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--item-bg-color);
 }
+.person-list__item:last-child {
+  margin-bottom: 0;
+}
 @media screen and (min-width: 768px) {
   .person-list__item {
     width: calc((100% - 30px) / 2);
@@ -307,13 +310,6 @@ img {
   .button-set {
     margin-bottom: 50px;
   }
-}
-
-.button-set__item {
-  margin-right: 8px;
-}
-.button-set__item:last-child {
-  margin-right: 0;
 }
 
 .button-set__btn {
@@ -717,16 +713,17 @@ body.backdrop.is-open {
 }
 
 .mob-menu-conatiner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
   padding: 48px 0 48px 40px;
 }
 @media screen and (max-width: 400px) {
   .mob-menu-conatiner {
     padding-left: 20px;
   }
-}
-
-.mob-menu__link-list {
-  margin-bottom: 302px;
 }
 
 .mob-menu__item {
@@ -1067,10 +1064,15 @@ body.backdrop.is-open {
 
 .features__item {
   width: 100%;
+  margin-bottom: 30px;
+}
+.features__item:last-child {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
   .features__item {
     width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1149,8 +1151,9 @@ body.backdrop.is-open {
   display: block;
   margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
-  font-style: inherit;
   font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   text-align: center;
   color: #ffffff;
@@ -1391,7 +1394,12 @@ body.backdrop.is-open {
 }
 
 .team .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team .title {
+    margin-bottom: 50px;
+  }
 }
 
 .backdrop {
